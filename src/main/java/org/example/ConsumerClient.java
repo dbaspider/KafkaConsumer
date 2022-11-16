@@ -26,9 +26,9 @@ public class ConsumerClient
         String group = "clientGroup1"; // args[1];
 
         Properties props = new Properties();
-        props.put("bootstrap.servers", "192.168.1.105:9092");
+        props.put("bootstrap.servers", "127.0.0.1:9092");
         props.put("group.id", group);
-        props.put("enable.auto.commit", "true");
+        props.put("enable.auto.commit", "false");
         props.put("auto.commit.interval.ms", "1000");
         props.put("session.timeout.ms", "30000");
         // 当各分区下有已提交的offset时，从提交的offset开始消费；无提交的offset时，从头开始消费
